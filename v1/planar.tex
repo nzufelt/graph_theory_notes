@@ -1,3 +1,50 @@
 \section{Planar Graphs} \label{sec:planar}
 
 This is the section on planar graphs, still to be completed.
+
+\begin{itemize}
+    \item Definition of graph projection
+    \item A Graph is planar if it (is isomorphic to?) a graph with a projection drawn in a plane with no edge-crossings (define)
+    \item examples
+    \item Jordan Curve Theorem: If $C$ is a continuous simple closed curve in a plane and two points $x$ and $y$ of $C$ are joined by a continuous simple arc $L$ such that $L \cap C = \{x, y\}$, then except for its endpoints $L$ is entirely contained in one of the two regions of $\R^2 \setminus C$.
+    \item $K_{3,3}$ is nonplanar (not using Euler)
+    \item $K_5$ is nonplanar
+    \item Any subgraph of a planar graph is planar
+    \item corollary any supergraph of a nonplanar graph is nonplanar
+    \item If $G$ may be obtained from $H$ by replacing an edge $(x, y)$ of $H$ with another vertex $v$, and a pair of edges $(x, v), (v, y)$, then $G$ is said to be obtained from $H$ via an \textbf{edge expansion}.  If $G$ may be obtained from $H$ by a finite sequence of edge expansions, then $G$ is an \textbf{expansion} of $H$.
+    \item (maybe?) If $G$ is obtained from $H$ by a sequence of expansions and passing to supergraphs, then $G$ is said to be an \textbf{expanded supergraph} of $H$ (my definition) (NOTE: this is equivalent to being a supergraph of an expansion.  Prove!)
+    \item Every expanded supergraph of $K_{3,3}$ or $K_5$ is nonplanar.
+    \item Kuratowski's Theorem: a graph is nonplanar if and only if it is an expanded supergraph of $K_{3,3}$ or $K_5$.
+    \item exercise: examples of large graphs, is it planar?
+
+    \item TODO: add exercises
+\end{itemize}
+
+% Should this be its own chapter?  Included in the current chapter?
+\section{Euler's Formula}
+\begin{itemize}
+    \item A \textbf{walk}, or \textbf{path} is a sequence $v_1, v_2, \ldots, v_n$ of not-necessarily-distinct vertices in a graph $G$ such that $(v_i, v_{i+1})$ is an edge of $G$ for $1\leq i <n$.
+    \item A graph is \textbf{connected} if every pair of vertices may be joined by a path.  Otherwise, it is disconneted
+    \item Disclaimer: path connected vs connected?
+    \item examples
+    \item Given a planar graph diagram $D$, a \textbf{face} of $D$ is the set of all points in $\R^2 \setminus D$ that may be joined by a continuous arc in $\R^2 \setminus D$.  The number of faces of $D$ is denoted as
+    \item prove if $G$ is a planar graph, then the number of faces of \textit{any} planar diagram of $G$ is the same.
+    \item A graph is \textbf{polygonal} if it is planar, connected, and has the propery that every edge borders on two different faces
+    % \item Induction?  Probably covered in the combinatorics section.
+    \item If $G$ is polygonal then $v-e+f = 2$. (two students, longish)
+    \item If $G$ is planar and connected, then $v-e+f = 2$.
+    \item $K_5$ and $K_{3,3}$ are nonplanar, revisited.
+    \item If $G$ is planar (and connected? not necessary) then $G$ has a vertex of degree $\leq 5$ (Q?)
+    \item exercises from 4
+    \item a graph is \textbf{regular} if all its vertices have the same degree, said ``regular of degree $d$''.
+    \item examples
+    \item a graph is \textbf{platonic} if it is polygonal, regular, and all its faces are bounded by the same number of edges
+    \item (what if we remove the last condition?)
+    \item examples
+    \item Theorem: Apart from $K_1$ and the cyclic graphs, there are 5 platonic graphs.  Prove by breaking into $d$ cases Needs lemata:
+    \begin{itemize}
+        \item if $G$ is regular of degree $d$ then $e=dv/2$.
+        \item If $G$ is platonic of degree $d$, and $n$ is the number of edges bounding each face, then $f = dv/n$.
+    \end{itemize}
+    \item exercises
+\end{itemize}

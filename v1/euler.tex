@@ -1,0 +1,39 @@
+\section{Eulerian and Hamiltonian Path}\label{sec:euler}
+
+% Rephrase using cycles and add cycles to the appropriate place
+
+\begin{itemize}
+    \item A path is \textbf{closed} if $v_1 = v_n$, otherwise it is \textbf{open}.
+    \item A path is \textbf{simple} if $|\{v_1, v_2, \ldots, v_n\}| = n$ if open or $n-1$ if closed. % cycles instead?
+    \item simple is equivalent to having no interior overlap
+    \item examples
+    \item An Eulerian path uses every edge in the graph exactly once
+    \item examples
+    \item they're simple
+    \item A connected graph has a closed Eulerian path if and only if every vertex is even.
+    \item There is an Eulerian cycle beginning at any vertex in a graph with all even vertices
+    \item A connected graph has an open Eulerian path if and only if every vertex is even except for exactly two.
+    \item the path must begin at one of the two odd vertices
+    \item A Hamiltonian path is one which uses every vertex exactly once (if closed, the first and last vertex is repeated)
+    \item examples
+    \item lemma If the sum of the degrees of every pair of vertices of a graph is at least $v-1$, then
+    \begin{itemize}
+        \item every pair of vertices are either adjacent to each other or to a common third vertex, and
+        \item $G$ is connected
+    \end{itemize}
+    \item if the sum of the degrees of every pair of vertices of $G$ is at least $v-1$, then $G$ has an open Hamiltonian path
+    \item if the sum of the degrees of every pair of vertices of $G$ is at least $v$, then $G$ has an closed Hamiltonian path
+    \item a \textbf{skein} is an object consisting of two vertices connected by two or more lines (finite?)
+    \item a \textbf{multigraph} $M(G)$ is an object consisting of a graph $G$ where some of its edges are replaced by skeins.  $G$ is called a \textbf{generator} of $M$
+    \item generators are unique
+    \item examples
+    \item define some terms for multigraphs and prove them?
+    \item a walk in a multigraph is, a euler walk is, a hamilton walk is$\ldots$
+    \item A connected multigraph has a closed euler walk iff every vertex is even.
+    \item same thing again with the open walk and two odd edges
+    \item K\"{o}nigsberg Bridge Problem
+    \item The sum of the degrees of the vertices of a multigraph is 2e
+    \item Every multigraph has an even number of odd vertices
+    \item applications?  aren't there tons?
+    \item exercises
+\end{itemize}
