@@ -1,0 +1,68 @@
+\section{Graphs}\label{sec:graphs}
+
+This is the section on graphs, still to be completed.
+
+\begin{definition}
+\begin{enumerate}
+    \item \label{def:graph} A \textbf{graph} $G=(V, E)$ is a pair of sets $V$ and $E$, where $V$ is a non-empty set and $E$ is a (possibly empty) set consisting only of two-element sets of the form $\{a, b\}$, where $a \in V$ and $b \in V$.  The set $V=V(G)$ is called the set of \textbf{vertices} of $G$ and the set $E=E(G)$ is called the set of \textbf{edges} of $G$.
+    \item The number of vertices in a graph is denoted by $v$ and the number of edges in a graph is denoted by $e$.  It is possible that $v=\infty$ or $e=\infty$, meaning that there is no such (finite) number.
+    \item If $e=(v_1, v_2)\in E$, then we say that $e$ \textbf{connects} $v_1$ and $v_2$ and that $v_1$ and $v_2$ are \textbf{adjacent}.
+    \item Graph Diagram {\color{red} finish! what does it mean to ``represent''?}
+    \item Two graphs are \textbf{equal} if they have equal vertex and edge sets.  Two graph diagrams are equal if they represent equal graphs.
+\end{enumerate}
+\end{definition}
+
+Another name for vertex is \textit{node}.
+
+\begin{lemma} Let $G$ be a graph.  Then $G$ has no \textnormal{loops, i.e.} edges connecting a vertex to itself, and $G$ has no \textnormal{skeins, i.e.} collections of more than one edge connecting a pair of vertices.
+\end{lemma}
+
+{\color{red} directed vs. undirected}
+
+\begin{examples}
+    \begin{enumerate}
+        \item null graph
+        \item cyclic graph $C_v$
+        \item complete graph $K_v$
+    \end{enumerate}
+\end{examples}
+
+\begin{theorem} \label{thm:edges_in_Kv} Let $K_v$ denote the complete graph on $v$ vertices.  Then $e=|E(K_v)|= \frac{1}{2} v \cdot (v-1)$.
+\end{theorem}
+
+\begin{definition} compliment and subgraph, isomorphism
+\end{definition}
+
+equal implies isomorphic
+
+isomorphism is an equivalence relation
+
+isomorphism implies equal numbers of Vs and Es
+
+definition of degree/valence
+
+isomorphism implies the set of degrees is the same and the number of vertices of degree $n$ is the same.
+
+non-isomorphism examples, e.g. non-iso_graphs.png \label{ex:non-iso_graphs}
+
+\section*{exercises (interject above)}
+
+wheel graphs, draw some and prove number of edges.
+
+determine and prove the number of edges in $\overline{G}$
+
+if
+
+determine all numbers $v$ such that $C_v \cong K_v$. prove.
+
+Prove that $C_v \cong \overline{C_v}$ if and only if $v = 5$.
+
+$G \cong \overline{G}$ implies that $v$ or $v-1$ is divisible by 4.
+
+Maybe theorem: if $G_1 \cong G_2$ and $A_1 \subseteq G_1$ then there exists a subgraph $A_2 \subseteq G_2$ with $A_1 \cong A_2$.  Then, reprove the non-iso from \ref{ex:non-iso_graphs}
+
+? prove the number of isomorphism classes of v=3 is 7.  ``Classify all graphs with 3 vertices up to isomorphism.''
+
+$G_1 \cong G_2$ iff $\overline{G_1} \cong \overline{G_2}$.
+
+define bipartite, prove non-isomorphism of a pair
