@@ -7,7 +7,13 @@ This is the section on graphs, still to be completed.
     \item \label{def:graph} A \textbf{graph} $G=(V, E)$ is a pair of sets $V$ and $E$, where $V$ is a non-empty set and $E$ is a (possibly empty) set consisting only of two-element sets of the form $\{a, b\}$, where $a \in V$ and $b \in V$.  The set $V=V(G)$ is called the set of \textbf{vertices} of $G$ and the set $E=E(G)$ is called the set of \textbf{edges} of $G$.
     \item The number of vertices in a graph is denoted by $v$ and the number of edges in a graph is denoted by $e$.  It is possible that $v=\infty$ or $e=\infty$, meaning that there is no such (finite) number.
     \item If $e=(v_1, v_2)\in E$, then we say that $e$ \textbf{connects} $v_1$ and $v_2$ and that $v_1$ and $v_2$ are \textbf{adjacent}.
-    \item Graph Diagram {\color{red} finish! what does it mean to ``represent''?}
+    \item \label{def:graph_diagram} Let $D$ be a subset of a space (typically the Euclidean Plane, $\mathbb{R}^2$) consisting of points and arcs connecting those points, such that the arcs only meet the points in their boundaries.  Given a graph $G$, $D$ is said to be a \textbf{graph diagram} for $G$ if:
+    \begin{enumerate}
+        \item the vertices of $G$ are in one-to-one correspondance with the points of $D$, and
+        \item the edges of $G$ are in one-to-one correspondance with the arcs of $D$.
+    Note that a graph diagram $D$ is sometimes referred to as an \textbf{embedding}, particularly if the space is not $\mathbb{R}^2$.
+    \end{enumerate}
+
     \item Two graphs are \textbf{equal} if they have equal vertex and edge sets.  Two graph diagrams are equal if they represent equal graphs.
 \end{enumerate}
 \end{definition}
@@ -47,23 +53,22 @@ isomorphism implies the set of degrees is the same and the number of vertices of
 non-isomorphism examples, e.g. \verb|non-iso_graphs.png| \label{ex:non-iso_graphs}
 
 \section*{exercises (interject above)}
-
-wheel graphs, draw some and prove number of edges.
-
-determine and prove the number of edges in $\overline{G}$
-
-if
-
-determine all numbers $v$ such that $C_v \cong K_v$. prove.
-
-Prove that $C_v \cong \overline{C_v}$ if and only if $v = 5$.
-
-$G \cong \overline{G}$ implies that $v$ or $v-1$ is divisible by 4.
-
-Maybe theorem: if $G_1 \cong G_2$ and $A_1 \subseteq G_1$ then there exists a subgraph $A_2 \subseteq G_2$ with $A_1 \cong A_2$.  Then, reprove the non-iso from \ref{ex:non-iso_graphs}
-
-? prove the number of isomorphism classes of v=3 is 7.  ``Classify all graphs with 3 vertices up to isomorphism.''
-
-$G_1 \cong G_2$ iff $\overline{G_1} \cong \overline{G_2}$.
-
-define bipartite, prove non-isomorphism of a pair
+\begin{enumerate}
+    \item wheel graphs, draw some and prove number of edges.
+    \item determine and prove the number of edges in $\overline{G}$ given data about $G$.
+    \item determine all numbers $v$ such that $C_v \cong K_v$. prove.
+    \item Prove that $C_v \cong \overline{C_v}$ if and only if $v = 5$.
+    \item $G \cong \overline{G}$ implies that $v$ or $v-1$ is divisible by 4.
+    \item Maybe theorem: if $G_1 \cong G_2$ and $A_1 \subseteq G_1$ then there exists a subgraph $A_2 \subseteq G_2$ with $A_1 \cong A_2$.  Then, reprove the non-iso from \ref{ex:non-iso_graphs}
+    \item ? prove the number of isomorphism classes of v=3 is 7.  ``Classify all graphs with 3 vertices up to isomorphism.''
+    \item $G_1 \cong G_2$ iff $\overline{G_1} \cong \overline{G_2}$.
+    \item define bipartite, prove non-isomorphism of a pair
+    \item Create formulae for the number of edges of each of the following families of graphs, based on the number of vertices ($v$):
+    \begin{itemize}
+        \item $K_v$
+        \item $C_v$
+        \item $\overline{C}_v$
+        \item $W_v$ (wheel graph)
+        \item $K_{m,n}$.
+    \end{itemize}
+\end{enumerate}
