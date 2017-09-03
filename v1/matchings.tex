@@ -5,4 +5,39 @@
     \item Diversity Criterion:
     \item Hall's Theorem
     \item Hungarian Algorithm?
+
+
+    % from int. comb.:
+    \item a \textbf{maximum matching} is a matching $M$ for which $|e(M)|$ is maximized among all matching for $G$.  In this case, we define an invariant $\rho(G) = |e(M)|$.
+    \item Four people $x_1, x_2, x_3, x_4$ apply for five jobs $y_1, y_2, y_3, y_4, y_5$, and suppose that:
+    \begin{itemize}
+        \item $x_1$ is qualified for $y_1, y_3, y_4, y_5$,
+        \item $x_2$ is qualified for $y_1, y_2, y_4$,
+        \item $x_3$ is qualified for $ y_2, y_4$, and
+        \item $x_4$ is qualified for $ y_2, y_3, y_4,$ and $y_5$.
+    \end{itemize}
+    Find a maximum matching.
+    \item Let $M$ be a matching.  def an \textbf{alternating path w.r.t $M$}, or an $M$-alternating path, is one if which the odd numbered edges do not belong to $M$, but...
+    \item theorem max matching iff no $M$-alt path (must be connected)
+    \item remark this doesn't really help prove that $M$ is a max matching.  why?
+    \item def a \textbf{cover} of a bipartite graph $G$ is a subset $S$ of the vertices $V(G)$ with the property that at least one vertex of each edge lies in $S$.  The number of the minimum cover (called the \textbf{cover number}) is $c(G)$.
+    \item lemma $\rho(G) \leq C(G)$.
+    \item thm (K\"onig) $\rho(G) = c(G)$.
+    \item Given an $m\times n$ chessboard, one may place a \textit{rook} on the board by selecting a square to contain the rook, which in the game of chess may ``attack'' any square in the same row or column as the rook.  Suppose the chessboard contains some number of \textit{forbidden squares}, that is, squares which may not contain rooks.  We are interested in finding the maximum number of \textit{non-attacking rooks}, that is, a set of rooks that pairwise cannot attack one another.
+
+    Show that this problem of placing non-attacking rooks on a chessboard with forbidden positions is equivalent to the problem of finding maximum matchings in bipartite graphs.  That is, show that every matching in a bipartite graph may be associated with a non-attacking rook layout in a chessboard with forbidden positions, and conversely, and show that a maximum matching is a maximum rook layout.
+    \item Let $G$ be a bipartite graph that is regular of degree $p\geq 1$.  Show that $E(G)$ may be decomposed into a partition of $p$ maximum matchings.  (In this case, the matchings are called \textit{perfect}, because each has the largest possible number of edges, given the vertex set.)
+    \item Suppose $G$ is a bipartite graph with bipartitions $X$ and $Y$.  Suppose that there is an integer $p$ such that each vertex in $X$ has at least $p$ edges and each vertex in $Y$ has at most $Y$ edges.  What can you say about the number of vertices in $X$ versus $Y$?  Prove your claim.
+    \item A cooporation has 7 positions and 10 applicants...
+    1 126
+    2 267
+    3 34
+    4 15
+    5 67
+    6 3
+    7 23
+    8 13
+    9 1
+    10 5
+
 \end{itemize}

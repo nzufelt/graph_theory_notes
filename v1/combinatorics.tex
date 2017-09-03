@@ -1,3 +1,68 @@
 \section{Combinatorics}\label{sec:combinatorics}
 
-This is the section on Combinatorics, still to be completed.
+\begin{itemize}
+% PHP
+\item pigeonhole principle
+\item given $m$ integers there exists a consecutive subset whose sum is divisible by $m$
+\item given $2n$ integers show that from any subset of $n+1$ of them there is a pair where one of which is divisible by the other
+\item (chinese remainder theorem) let $m$ and $n$ be relatively prime positive integers, and let $0 \leq a \leq m-1$ and $0 \leq b \leq n-1$.  Then there is a positive integer $x$ such that the remainder when $x$ is divided by $m$ is $a$, and the remainder when $x$ is divided by $n$ is $b$.
+\item strong php: $q_1, \ldots, q_n$ positive ints, if $q_1 + q_2 + \ldots + q_n -n + 1$ objects are put into $n$ boxes, then for at least one $i$, the $i^{\text{th}}$ box contains at least $q_i$ objects. (prove)
+\item If $n+1 $ numbers are chosen from the set $\{1, \ldots, 3n\}$, then there is a pair that differ by $2$.  Repeat with $2n$ and differ by 1, then generalize and prove.
+\item determine an integer $m_n$ such that if $m_n$ points are chosen from an equilateral triangle of side length 1, then there are two whose distance is equal to $\frac{1}{n}$.
+
+% Perms and Combs
+\item rule of addition: If a set $S$ can be written as $S = S_1 \cup S_2$ with $S_1 \cap S_2 = \emptyset$, then $|S| = |S_1| + |S_2|$.
+\item interpret as breaking a counting problem up into two ways
+% Need ordered pairs already!
+\item rule of multiplication: Let $S$ be the set of ordered pairs $(a, b)$ of objects, where the $a$ lies in a set of size $n$ and $b$ lies in a set of size $m$.  Then $|S| = m \cdot n$.
+\item Example determine the number of positive integers that divide $32189975201412589275 = 3^4 \cdot 5^2 \cdot 11^7 \cdot 13^8$.
+\item NOTE: NOT THIS!rule of multiplication: Let $A$ and $B$ be sets, and let $S$ be the set of ordered pairs $(a, b)$ of objects, where the $a\in A$ and $b \in B$.  Then $|S| = |A| \cdot |B|$. \textbf{for example}: how many 2-digit numbers have distinct and nonzero digits?
+\item subtraction priciple: Let $A \subseteq U$ be sets.  Then $|A| = |U| - |\overline{A}|$.  % check that this is our notation!
+\item a set of comp pw are taken from 0-9 and a-z, how many have repeated symbols?
+\item division principle: Let $S$ be a finite set that is partitioned into $k$ parts of equal size, say $n$.  Then $$k = \frac{|S|}{n}.$$
+\item how many odd numbers between 1000 and 9999 have distinct digits?
+\item how many integers between 0 and 10000 have exactly one digits equal to 5?
+\item How many different 5-digit numbers can be constructed from the digits $1, 1, 1, 3, 5$?
+\item def $r$-permutation of a set $S$ of $n$ elements in an ordered arrangement.  The number of such is $P(n, r) = {}_n P_r$.
+\item theorem $P(n, r) = n \cdot (n-1) \cdot \ldots \cdot (n-r+1)$ (prove!)
+\item remark note that that's $\dfrac{n!}{(n-r)!}$.
+\item Find a closed-form expression (\textit{i.e.} no $\ldots$) for the number of possible positions of the ``15-puzzle'': a game consisting of a $4\times 4$ grid of 15 numbers and one blank space, where one may swap positions of the blank space with one of the adjacent (up, down, left, or right) numbered squares.
+\item How many 5-digit numbers with unique, non-zero digits are there such that a 5 is never followed by a 6, and vice versa?
+\item def $r$-combination of a set $S$ of $n$ elements is a subset of size $r$.  The number of such is $C(n, r) = {}_n C_r = \left(\begin{array}{c} n \\ r\end{array}\right)$.
+\item theorem For $0 \leq r \leq n$, $P(n, r) = r! C(n, r)$, hence $$C(n, r) = \dfrac{n!}{r!(n-r)!}.$$
+\item $25$ points are drawn on a piece of paper such that no 3 are colinear.  How many line segments pass through 2 of them?
+\item cor $C(n, r) = C(n, n-r)$.
+\item them $C(n, 0) + C(n, 1) + \ldots + C(n,n) = 2^n$.
+\item How many straight-flushes are there in a deck of cards? (5 consecutive cards of the same suit)
+\item How many integers larger than 5400 have all distinct digits which are not 2 or 6?
+\item In how many ways can six students and six faculty members be seated at a table if the two groups must alternate?
+\item In how many ways can 8 indistinguishable rooks be placed of a chess board so that they cannot attack one another?
+\item A woman works in a building 9 blocks east and 8 blocks north of her home.  When commuting, she never backtracks or takes any route that is longer than the shortest possible path.  Suppose the grid of roads between her home and her work is full of possible paths, except for the road that travels one block east from the block which begins 4 blocks east and 3 blocks north from her home.  How many viable paths to work does she have?
+\item A group of $mn$ players are to be arranged into $m$ teams each with $n$ players.  Determine the number of ways this can be arranged if the teams
+\begin{enumerate}
+    \item have names, and
+    \item are indistinguishable.
+\end{enumerate}
+\item Pascal's Formula: $C(n, k) = C (n-1, k) + C(n-1, k-1)$.
+\item What does the above have to do with the so-called pascal's triangle?
+\item Binomial Theorem: $(x+y)^n = x^n + C(n,1) x^{n-1} y + C(n, 2) x^{n-2}y^2 + \ldots + C(n, n-1) x y^{n-1} + y^n$.
+\item Prove that
+\begin{enumerate}
+    \item $\displaystyle 3^n = \sum_{k=0}^n C(n, k) 2^k$, and
+    \item $\displaystyle 2^n = \sum_{k=0}^n (-1)^k C(n, k) 3^{n-k}$.
+\end{enumerate}
+
+% inclusion-exclusion
+\item find the number of integers between 1 and 600 which are not divisible by 6.
+\item theorem inclusion-exclusion: Let $S$ be a finite set and let $P_1, P_2, \ldots, P_n$ be a collection of properties that some elements of $S$ satisfy.  Let $A_i$ denote the subset of $S$ satisfying property $P_i$ for $1\leq i \leq n$.  Let $n_k$ denote the number of elements in any $k$-fold intersection of the sets $\{A_i\}$, that is,
+$$n_k = \displaystyle \sum_{i_1, i_2, \ldots, i_k} |A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k}|,$$
+where $i_1, i_2, \ldots, i_k \in \{1, 2, \ldots, n\}$.  Then
+$$|\overline{A_1}\cap \overline{A_2}\cap \ldots \cap \overline{A_i} = |S| - n_1 + n_2 - n_3 + \ldots + (-1)^n\ n_n.$$
+\item How many permutations of the letters \texttt{C, A, T, D, O, G, M, A, T, H} have none of the words \texttt{CAT}, \texttt{DOG}, or \texttt{MATH} in them?
+\item Find the number of integers between 1 and 10000 (inclusive) that are \textit{not} divisible by 4, 5, or 6.
+\item Find the number of integers between 1 and 10000 (inclusive) that are not perfect squares, cubes, or fourth powers (sometimes called perfect \textit{tesseractic} numbers).
+\item remark about multisets and questions like ``number of nonnegative solutions to the eq $x_1 + x_2 + x_3 + x_4 = 14$ subject to the conditions $x_1 \leq 4$, $x_2 \leq 7$, etc.'', which proves useful in many contexts.  The reader is encouraged to explore creating her or his own definition of a \textit{multiset} and to formalize how the inclusion-exclusion principle applies.
+
+
+
+\end{itemize}
