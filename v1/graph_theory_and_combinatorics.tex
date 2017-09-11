@@ -7,6 +7,7 @@
 \usepackage{color}
 \usepackage[all]{xy}
 
+\theoremstyle{definition} % remove italics from all theorem statements
 \newtheorem {theorem}{Theorem}[section]
 \newtheorem {lemma}[theorem]{Lemma}
 \newtheorem {proposition}[theorem]{Proposition}
@@ -17,6 +18,7 @@
 \newtheorem {fact}[theorem]{Fact}
 \newtheorem {remark}[theorem]{Remark}
 \newtheorem {example}[theorem]{Example}
+\newtheorem {examples}[theorem]{Examples}
 \newtheorem {assumption}[theorem]{Assumption}
 \newtheorem {notation}[theorem]{Notation}
 \newtheorem {exercises}[theorem]{Exercises}
@@ -33,6 +35,9 @@
 
 \renewcommand{\P}{\widehat{P}}
 \newcommand{\Q}{\widehat{Q}}
+
+% \newcommand{\comb}[2]{\left(\begin{array}{c} #1 \\ #2\end{array}\right)}
+
 
 \makeatletter
 \let\@fnsymbol\@arabic
@@ -53,10 +58,10 @@
 \input{introduction}
 
 \newpage
-\input{combinatorics}
+\input{settheory}
 
 \newpage
-\input{settheory}
+\input{combinatorics}
 
 \newpage
 \input{graphs}
