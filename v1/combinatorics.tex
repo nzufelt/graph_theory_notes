@@ -3,34 +3,36 @@
 \begin{theorem}[Pigeonhole Principle] Let $n$ be a natural number.  If $n+1$ objects are to be placed into $n$ boxes, then at least one of the boxes must contain at least two objects.
 \end{theorem}
 
-\begin{examples}\begin{enumerate}
-    \item Show that there is some day of the week on which over 1 billion people have been born.
-    \item Show that given $m$ integers $A = \{a_1, a_2, \ldots, a_m\}$, there exists a consecutive subset $\{a_k, a_{k+1},\ldots, a_l\} \subseteq A$ whose sum is divisible by $m$.
+\begin{examples}\leavevmode
+\begin{enumerate}
+    \item Show that there is some day of the week on which over 1 billion currently-living people have been born.
+    \item Show that given $m$ integers $A = \{a_1, a_2, \ldots, a_m\}$, there exists a consecutive subset $\{a_k, a_{k+1},\ldots, a_l\} \subseteq A$ whose sum is divisible by $m$, for $k$ and $l$ natural numbers with $1 \leq k \leq l \leq m$.
     \item Show that given $2n$ integers, from any subset of $n+1$ of them there is a pair where one element of which is divisible by the other.
-\end{enumerate}\end{examples}
+\end{enumerate}
+\end{examples}
 
-\begin{theorem}[Chinese Remainder Theorem] Let $m$ and $n$ be relatively prime positive integers, and let $0 \leq a \leq m-1$ and $0 \leq b \leq n-1$.  Then there is a positive integer $x$ such that the remainder when $x$ is divided by $m$ is $a$, and the remainder when $x$ is divided by $n$ is $b$.
+\begin{theorem}[Chinese Remainder Theorem] Let $m$ and $n$ be relatively prime positive integers, and let $a$ and $b$ be integers with $0 \leq a \leq m-1$ and $0 \leq b \leq n-1$.  Then there is a positive integer $x$ such that the remainder when $x$ is divided by $m$ is $a$, and the remainder when $x$ is divided by $n$ is $b$.
 \end{theorem}
 
 \begin{theorem}[Strong Pigeonhole Principle] Let $q_1, q_2, \ldots, q_n$ be positive integers.  If $q_1 + q_2 + \ldots + q_n - n + 1$ objects are put into $n$ boxes, then for at least one $i$, the $i^{\text{th}}$ box contains at least $q_i$ objects.
 \end{theorem}
 
-\begin{examples} \begin{enumerate}
+\begin{examples} \begin{enumerate} \leavevmode
     \item If $n+1$ numbers are chosen from the set $\{1, \ldots, 2n\}$, then there is a pair that differ by $1$.
     \item If $n+1$ numbers are chosen from the set $\{1, \ldots, 3n\}$, then there is a pair that differ by $2$.
 \end{enumerate}\end{examples}
 
-\begin{exercise} Generalize the two examples above and prove.
+\begin{exercise} Generalize the examples above and prove.
 \end{exercise}
 
-\begin{example} Determine an integer $m_n$ such that if $m_n$ points are chosen from an equilateral triangle of side length 1, then there are two whose distance is equal to $\frac{1}{n}$.
+\begin{example} Let $n$ be a natural number. Determine a natural number $m_n$ such that if $m_n$ points are chosen from an equilateral triangle of side length 1, then there are two whose distance is less than or equal to $\frac{1}{n}$.
 \end{example}
 
 \subsection{Permutations and Combinations}
 \begin{theorem}[Rule of Addition] If a set $S$ can be written as $S = S_1 \cup S_2$ with $S_1 \cap S_2 = \emptyset$, then $|S| = |S_1| + |S_2|$.
 \end{theorem}
 
-\begin{remark} Note that this should be viewed, along with all the other ``Rules of (arithmetic)'' in this section, as breaking down or otherwise simplifying a counting problem.
+\begin{remark} This should be viewed, along with all the other ``Rules of (arithmetic)'' in this section, as breaking down or otherwise simplifying a counting problem.
 \end{remark}
 
 \begin{example} A student at Phillips Academy wants to take one Mathematics elective or one English elective, but cannot take both.  If there are 2 Mathematics electives and 3 English electives on offer, how many options are available to the student this term?
@@ -42,30 +44,30 @@
 \begin{example} Determine the number of positive integers that divide $32189975201412589275 = 3^4 \cdot 5^2 \cdot 11^7 \cdot 13^8$.
 \end{example}
 
-\begin{remark} Note that the Rule of Multiplication is not:
+\begin{question} Note that the Rule of Multiplication is not:
 
-    Let $A$ and $B$ be sets, and let $S$ be the set of ordered pairs $(a, b)$ of objects, where the $a\in A$ and $b \in B$.  Then $|S| = |A| \cdot |B|$.
+    \textit{Let $A$ and $B$ be sets, and let $S$ be the set of ordered pairs $(a, b)$ of objects, where the $a\in A$ and $b \in B$.  Then $|S| = |A| \cdot |B|$.}
 
-    Why not?  In order to successfully answer this question, consider the following question: How many 2-digit numbers have distinct and nonzero digits?
-\end{remark}
+    Why not?  In order to successfully answer this question, consider the following problem: How many 2-digit numbers have distinct and nonzero digits?
+\end{question}
 
-\begin{theorem}[Rule of Subtraction] Let $A \subseteq U$ be sets.  Then $|A| = |U| - |\overline{A}|$.  % check that this is our notation!
+\begin{theorem}[Rule of Subtraction] Let $A$ and $U$ be subsets such that $A \subseteq U$.  Then $|A| = |U| - |U\setminus A|$.
 \end{theorem}
 
-\begin{example} A set of computer passwords are taken from the characters 0-9 and $a$-$z$. How many have repeated symbols? (Hint: use the Rule of Subtraction.)
+\begin{example} A set of computer passwords are taken from the characters 0-9 and $a$-$z$. How many have repeated symbols?
 \end{example}
 
 \begin{theorem}[Rule of Division] Let $S$ be a finite set that is partitioned into $k$ parts of equal size, say $n$.  Then $$k = \frac{|S|}{n}.$$
 \end{theorem}
 
-\begin{examples}
+\begin{examples}\leavevmode
 \begin{enumerate}
     \item How many odd numbers between 1000 and 9999 have distinct digits?
     \item How many different 5-digit numbers can be constructed from the digits $1, 1, 1, 3, 5$?
 \end{enumerate}
 \end{examples}
 
-\begin{definition} An \textbf{$r$-permutation} of a set $S$ of $n$ elements in an ordered arrangement of elements of $S$ of size $r$ .  The number of such $r$-permutations is $P(n, r) = {}_n P_r$.
+\begin{definition} An \textbf{$r$-permutation} of a set $S$ of $n$ elements is an ordered arrangement of elements of $S$ of size $r$ .  The number of such $r$-permutations is $P(n, r) = {}_n P_r$.
 \end{definition}
 
 \begin{theorem} Let $S$ be a set of size $n$ and $1 \leq r \leq n$.  Then $P(n, r) = n \cdot (n-1) \cdot \ldots \cdot (n-r+1).$
@@ -74,14 +76,14 @@
 \begin{corollary} Let $S$ be a set of size $n$ and $1 \leq r \leq n$.  Then $P(n, r) = \dfrac{n!}{(n-r)!}.$
 \end{corollary}
 
-\begin{exercises}
+\begin{exercises}\leavevmode
 \begin{enumerate}
-    \item Find a closed-form expression (\textit{i.e.} no $\ldots$) for the number of possible positions of the ``15-puzzle'': a game consisting of a $4\times 4$ grid of 15 numbers and one blank space, where one may swap positions of the blank space with one of the adjacent (up, down, left, or right) numbered squares.
+    \item Find a closed-form expression (\textit{i.e.} no ``$\ldots$'') for the number of possible positions of the ``15-puzzle'': a game consisting of a $4\times 4$ grid of 15 numbers and one blank space, where one may swap the positions of the blank space with one of the adjacent (up, down, left, or right) numbered squares.
     \item How many 5-digit numbers with unique, non-zero digits are there such that a 5 is never followed by a 6, and vice versa?
 \end{enumerate}
 \end{exercises}
 
-\begin{definition} An \textbf{$r$-combination} of a set $S$ of $n$ elements is a subset of size $r$.  The number of such may be written as $C(n, r) = {}_n C_r = {{n}\choose{r}}$.
+\begin{definition} An \textbf{$r$-combination} of a set $S$ of $n$ elements is a subset of size $r$.  The number of such may be written as ${{n}\choose{r}} = C(n, r) = {}_n C_r$.
 \end{definition}
 
 \begin{theorem}For integers $r$ and $n$ with $0 \leq r \leq n$, $P(n, r) = r! {{n}\choose{r}}$, hence $${{n}\choose{r}} = \dfrac{n!}{r!(n-r)!}.$$
@@ -96,13 +98,13 @@
 \begin{theorem} ${{n}\choose{0}} + {{n}\choose{1}} + \ldots + {{n}\choose{n}} = 2^n$.
 \end{theorem}
 
-\begin{exercises}
+\begin{exercises}\leavevmode
 \begin{enumerate}
-    \item How many straight-flushes are there in a deck of cards? (5 consecutive cards of the same suit)
-    \item How many integers larger than $5400$ have all distinct digits which are not 2 or 6?
-    \item In how many ways can six students and six faculty members be seated at a table if the two groups must alternate?
-    \item In how many ways can 8 indistinguishable rooks be placed of a chess board so that they cannot attack one another?
-    \item A woman works in a building 9 blocks east and 8 blocks north of her home.  When commuting, she never backtracks or takes any route that is longer than the shortest possible path.  Suppose the grid of roads between her home and her work is full of possible paths, except for the road that travels one block east from the block which begins 4 blocks east and 3 blocks north from her home.  How many viable paths to work does she have?
+    \item How many straight-flushes are there in a deck of cards? (A straight-flush consists of 5 consecutive cards of the same suit.)
+    \item How many integers larger than $5400$ have all distinct digits, none of which are 2 or 6?
+    \item In how many ways can six students and six faculty members be seated at a table if the members of the two groups must alternate?
+    \item In how many ways can 8 indistinguishable rooks be placed on a chess board so that they cannot attack one another?
+    \item A woman works in a building 9 blocks east and 8 blocks north of her home.  When commuting, she never backtracks or takes any route that is longer than the shortest possible path.  Suppose the grid of roads between her home and her work is full of possible paths, except for the road that travels one block east from the block which lies 4 blocks east and 3 blocks north from her home.  How many viable paths to work does she have?
     \item A group of $mn$ players are to be arranged into $m$ teams each with $n$ players.  Determine the number of ways this can be arranged if the teams
     \begin{enumerate}
         \item have names, and
@@ -129,22 +131,22 @@
 
 \subsection{The Inclusion-Exclusion Principle}
 
-\begin{exercise} Find the number of integers between 1 and 600 which are not divisible by 6.
+\begin{exercise} Find the number of integers between 1 and 600 which are not divisible by 6.  Do so in two ways: first, by directly counting it, then by combining the processes of counting those numbers divisible by 2 and those numbers divisible by 3.
 \end{exercise}
 
 \begin{theorem}[Inclusion-Exclusion Principle] Let $S$ be a finite set and let $P_1, P_2, \ldots, P_n$ be a collection of properties that some elements of $S$ satisfy.  Let $A_i$ denote the subset of $S$ satisfying property $P_i$ for $1\leq i \leq n$.  Let $n_k$ denote the number of elements in any $k$-fold intersection of the sets $\{A_i\}$, that is,
 $$n_k = \displaystyle \sum_{i_1, i_2, \ldots, i_k} |A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k}|,$$
 where $i_1, i_2, \ldots, i_k \in \{1, 2, \ldots, n\}$.  Then
-$$|\overline{A_1}\cap \overline{A_2}\cap \ldots \cap \overline{A_i} = |S| - n_1 + n_2 - n_3 + \ldots + (-1)^n\ n_n.$$
+$$|\overline{A_1}\cap \overline{A_2}\cap \ldots \cap \overline{A_i} |= |S| - n_1 + n_2 - n_3 + \ldots + (-1)^n\ n_n.$$
 \end{theorem}
 
-\begin{examples}
+\begin{examples}\leavevmode
 \begin{enumerate}
     \item How many permutations of the letters \texttt{C, A, T, D, O, G, M, A, T, H} have none of the words \texttt{CAT}, \texttt{DOG}, or \texttt{MATH} in them?
     \item Find the number of integers between 1 and 10000 (inclusive) that are \textit{not} divisible by 4, 5, or 6.
-    \item Find the number of integers between 1 and 10000 (inclusive) that are not perfect squares, cubes, or fourth powers (sometimes called perfect \textit{tesseractic} numbers).
+    \item Find the number of integers between 1 and 10000 (inclusive) that are not perfect squares, cubes, or fourth powers (sometimes called perfect \textit{tesseractic}s).
 \end{enumerate}
 \end{examples}
 
-\begin{remark} Oftentimes when learning about the Inclusion-Exclusion Principle one studies questions of the form ``find the number of nonnegative solutions to the equation $x_1 + x_2 + x_3 + x_4 = 14$ subject to the conditions $x_1 \leq 4$, $x_2 \leq 7$, etc.'', which proves useful in many contexts.  However, this would require the formulation of a notion of a \textit{multiset}, namely a set that may have repeats.  This is not a particularly difficult task, but requires reproving many theorems.  The reader is encouraged to explore creating her or his own definition of a \textit{multiset} and to formalize how the inclusion-exclusion principle applies in this setting.
+\begin{remark} Oftentimes when learning about the Inclusion-Exclusion Principle one studies questions of the form ``find the number of nonnegative solutions to the equation $x_1 + x_2 + x_3 + x_4 = 14$ subject to the conditions $x_1 \leq 4$, $x_2 \leq 7$, etc.'', which proves useful in many contexts.  However, this would require the formulation of a notion of a \textit{multiset}, namely a set that may have repeats.  This is not a particularly difficult task, but requires reproving many theorems.  The reader is encouraged to explore creating her or his own definition of a \textit{multiset} and to formalize how the Inclusion-Exclusion Principle applies in this setting.
 \end{remark}

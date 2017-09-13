@@ -1,45 +1,44 @@
 \section{Set Theory}\label{sec:settheory}
 
-\begin{definition}
+\begin{definition} \leavevmode
 \begin{enumerate}
     \item \label{def:set} A \textbf{Set} is a collection of distinct objects, none of which is the set itself.  If $a$ is an object belonging to the set $A$, we write $a \in A$, and say ``$a$ is an element of $A$''.
     \item \label{def:nullset} A set containing no elements is called the \textbf{empty set}, or the \textbf{null set}, and is written $\emptyset$ or $\{ \}$.
-    \item \label{def:subset} A set $A$ is said to be a \textbf{subset} of the set $B$, written $A \subseteq B$ if every element of $A$ is also an element of $B$.
+    \item \label{def:subset} A set $A$ is said to be a \textbf{subset} of the set $B$, written $A \subseteq B$, if every element of $A$ is also an element of $B$.
     \item \label{def:setequality} A set $A$ is said to be a \textbf{equal to} the set $B$, written $A = B$ if $A \subseteq B$ and $B \subseteq A$.
 \end{enumerate}
 \end{definition}
 
-If it is possible to enumerate the elements of $A$, we do so with the notation:
-$$ A = \{ a, \pi, \frac{45}{36}, \text{``Massachusetts''}\}.$$
+If it is possible to enumerate the elements of $A$, we do so with the following notation:
+$$ A = \left\{ a, \pi, \frac{45}{36}, \text{``Massachusetts''}\right\}.$$
 
 \begin{remark} You may find the definition of a mathematical set nebulous and confusing.  What's a ``collection''?  What's an ``object'', and what does it mean for them to be ``distinct''?  In truth, while it is possible to formally define all of these concepts, it is typically the case that a student has an intuitive understanding of a set, and can begin from that.
-
-However, this should be the only such definition in the course.
 \end{remark}
 
 \begin{exercise} List all the subsets of $\{1, 2, 3\}$.
 \end{exercise}
 
-\begin{notation} (Set Builder Notation) Let $A$ be a set, and for all $x \in A$, let $p(x)$ be a proposition about $x$ which may be true or false.  Then we may build a set by taking all those elements of $A$ for which the proposition is true; such a set may be written down using \textbf{set builder notation}:
+\begin{notation} (Set Builder Notation) Let $A$ be a set, and for all $x \in A$, let $p(x)$ be a proposition about $x$ which may be true or false.  Then we may build a set $S$ by taking all those elements of $A$ for which the proposition is true; such a set may be written down using \textbf{set builder notation}:
     $$S = \{x\in A\mid p(x)\},$$
 and we read this as ``S is (equal to) the set of all $x$ in $A$ such that $p$ of $x$.''  One important note is that a set $A$ must exist in order to use set builder notation; as a result of this, we will use the term \textit{universe of discourse}, often denoted by $X$, to describe any reasonably conceivable objects that may be placed into a set.  You will see this appearing in the definitions ahead (see for example Definition \ref{def:setunion}).
 \end{notation}
 
 \begin{exercises} Let $\mathbb{N} = \{1, 2, 3, \ldots\}$ denote the set of natural numbers.\begin{enumerate}
-    \item Translate the set $\{1, 2, 3, 4, 5\}$ into set builder notation.
-    \item Write down, without the uses of ellipses (``$\ldots$''), notation defining the set of even natural numbers; repeat for the set of odd natural numbers divisible by 5 (one may use ``$7\mid 14$'' to say that ``$7$ divides $14$'').
+    \item Translate the set $S=\{1, 2, 3, 4, 5\}$ into set builder notation, where $A=\mathbb{N}$.
+    \item Write down, without the uses of ellipses (``$\ldots$''), notation defining the set of even natural numbers
+    \item Repeat the above exercise for the set of odd natural numbers divisible by 5 (one may use ``$7\mid 14$'' to say that ``$7$ divides $14$'').
 \end{enumerate}\end{exercises}
 
 \begin{theorem}\label{thm:nullsetunique} There is only one empty set.
 \end{theorem}
 
-\begin{theorem}\label{thm:subsettransitivity} (transitivity of subset) If $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$.
+\begin{theorem}[transitivity of subset]\label{thm:subsettransitivity}  If $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$.
 \end{theorem}
 
 \subsection{Getting new sets from old}
-\begin{definition} Let $A$ and $B$ be sets, and let $X$ denote the universe of discourse.
+\begin{definition} \label{def:setunion} Let $A$ and $B$ be sets, and let $X$ denote the universe of discourse.
 \begin{enumerate}
-    \item \label{def:setunion} The set $A \cup B = \{x\in X\mid x \in A \lor x\in B\}$ is called the \textbf{union} of $A$ and $B$.
+    \item  The set $A \cup B = \{x\in X\mid x \in A \lor x\in B\}$ is called the \textbf{union} of $A$ and $B$.
     \item \label{def:setintersection} The set $A \cap B = \{x\in X\mid x \in A \land x\in B\}$ is called the \textbf{intersection} of $A$ and $B$.
     \item \label{def:setcomplement} The set $A \smallsetminus B = \{x\in A\mid x \not\in B\}$ is called the \textbf{(relative) complement} of $A$ in $B$.
 \end{enumerate}
@@ -66,7 +65,7 @@ and we read this as ``S is (equal to) the set of all $x$ in $A$ such that $p$ of
 \begin{theorem} For sets $A$ and $B$, $(A\smallsetminus B)\cup (B\smallsetminus A) = (A\cup B) \smallsetminus (A\cap B)$.
 \end{theorem}
 
-For our purposes, a \textit{claim} is something that may or may not be true, and we need to determine whether or not it is true.
+For our purposes, a \textit{claim} is something that may or may not be true, and we need to determine whether or not it is true and justify it with a proof or counterexample.
 
 \begin{claim} For all sets $A$, $B$, and $C$, if $A \subseteq B\cup C$ then $A\subseteq B$ or $A\subseteq C$.
 \end{claim}
@@ -85,7 +84,7 @@ For our purposes, a \textit{claim} is something that may or may not be true, and
 \end{enumerate}
 \end{definition}
 
-\begin{remark} In a traditional set theory course, one uses ordered pairs to first define cartesian products, and then relations, functions, injections, surjections, domain, co-domain, range, \textit{etc.} before defining bijections. For our purposes, bijections will suffice.
+\begin{remark} In a traditional set theory course, one uses ordered pairs to first define cartesian products, and then relations, functions, injections, surjections, domain, co-domain, range, \textit{etc.} before defining bijections. For our purposes, bijections as defined above will suffice.
 \end{remark}
 
 \begin{theorem}[Bijectivity is an equivalence relation] Let $A$, $B$, and $C$ be sets.
@@ -95,14 +94,14 @@ For our purposes, a \textit{claim} is something that may or may not be true, and
     \item (transitivity) If $A$ is in bijection with $B$, and $B$ is in bijection with $C$, then $A$ is in bijection with $C$.
 \end{enumerate}\end{theorem}
 
-\begin{remark} The fact that bijections satisfy the above three properties give it the status of being what's called an \textbf{equivalence relation}.  We will see equivalence relations again in the future when we discuss graphs.  One often considers equivalence relations to be a notion of ``sameness'': if $A$ is in bijection with $B$, then they're essentailly the same in my mind.
+\begin{remark} The fact that bijections satisfy the above three properties give it the status of being what's called an \textbf{equivalence relation}.  We will see equivalence relations again in the future when we discuss graphs.  One often considers equivalence relations to be a notion of ``sameness'': if $A$ is in bijection with $B$, then they're essentially the same object.
 \end{remark}
 
 \begin{definition} If a set $A$ is in bijection with the set $\{1, 2, 3, 4, \ldots, n\}$, then the \textbf{cardinality} of $A$ is given by $n$, written $|A| = n$, and we say that $A$ is \textbf{finite}.  If a set is in bijection with the natural numbers, then we say that it is \textbf{countably infinite}.\end{definition}
 
 \begin{theorem} \label{thm:bijectioncardinality} If $|A|\neq |B|$, then $A$ is not in bijection with $B$. \end{theorem}
 
-\begin{question} Is the \textit{converse} of Theorem \ref{thm:bijectioncardinality} true?  Prove or disprove. (The \textit{converse} of a statement $x \implies y$ is $y \implies x$.)
+\begin{question} Is the \textit{converse} of Theorem \ref{thm:bijectioncardinality} true?  Prove or disprove. (The \textit{converse} of a statement $p \to q$ is $q \to p$.)
 \end{question}
 
 \begin{theorem} Being countably infinite and finite are mutually exclusive set properties. \end{theorem}
@@ -120,7 +119,7 @@ For our purposes, a \textit{claim} is something that may or may not be true, and
 
     \item Prove that the natural numbers are in bijection with the integers.
 
-    \item Let $C$ be a bijection between the natural numbers ($\mathbb{N}$) and the integers ($\mathbb{Z}$), so that $C\subseteq\{(x,y)\mid x\in \mathbb{N}\land \mathbb{Z}\}$.  Show that there exist elements $(a, b)$ and $(x,y)$ in $C$ such that $a > x$ and $b < y$.
+    \item Let $C$ be a bijection between the natural numbers ($\mathbb{N}$) and the integers ($\mathbb{Z}$), so that $C\subseteq\{(x,y)\mid x\in \mathbb{N}\land y\in\mathbb{Z}\}$.  Show that there exist elements $(a, b)$ and $(x,y)$ in $C$ such that $a > x$ and $b < y$.
 
     \item Prove that the natural numbers are in bijection with the set of ordered pairs $\{(n, a) \mid n\in \mathbb{N} \land a \in \{1,2,3\}\}$.
 
