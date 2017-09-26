@@ -56,7 +56,7 @@ and we read this as ``S is (equal to) the set of all $x$ in $A$ such that $p$ of
 \begin{theorem} \label{thm:reversesetcomplements}Let $A$, $B$, and $X$ be sets. If $A \subseteq B$, then $X \smallsetminus B \subseteq X \smallsetminus A$.
 \end{theorem}
 
-\begin{exercise} Write down and prove the \textit{inverse} of Theorem \ref{thm:reversesetcomplements}. (The inverse of the statement $p(x)$ is $\neg p(x)$.)
+\begin{exercise} Write down the \textit{converse} of Theorem \ref{thm:reversesetcomplements}. It isn't quite true (why not?) unless you also add the assumption that $A\subseteq X$ and $B\subseteq X$.  Prove the converse with that additionally assumption. (The \textit{converse} of a statement $p \to q$ is $q \to p$.)
 \end{exercise}
 
 \begin{theorem} Let $A$ and $B$ be sets. Then $A\smallsetminus B = \emptyset$ if and only if $A \subseteq B$.
@@ -77,8 +77,8 @@ For our purposes, a \textit{claim} is something that may or may not be true, and
     \item A \textbf{bijection}, or a \textbf{one-to-one correspondence}, between $A$ and $B$ is a set $C$ with all of the following properties.
     \begin{itemize}
         \item Every element of $C$ consists of an ordered pair $(a,b)$ where $a \in A$ and $b \in B$.
-        \item (injective) Every element of $a$ exists as an element of exactly one element of $C$.
-        \item (sujective) Every element of $b$ exists as an element of exactly one element of $C$.
+        \item (injective) Every element of $A$ exists as the first element of exactly one element of $C$.
+        \item (sujective) Every element of $B$ exists as the second element of exactly one element of $C$.
     \end{itemize}
     We say that $A$ and $B$ are \textbf{in bijection} (or sometimes \textit{bijective}) if there exists a bijection between them; this is sometimes written as $A \cong B$, but it often just written out in words.
 \end{enumerate}
@@ -101,7 +101,7 @@ For our purposes, a \textit{claim} is something that may or may not be true, and
 
 \begin{theorem} \label{thm:bijectioncardinality} If $|A|\neq |B|$, then $A$ is not in bijection with $B$. \end{theorem}
 
-\begin{question} Is the \textit{converse} of Theorem \ref{thm:bijectioncardinality} true?  Prove or disprove. (The \textit{converse} of a statement $p \to q$ is $q \to p$.)
+\begin{question} Is the \textit{converse} of Theorem \ref{thm:bijectioncardinality} true?  Prove or disprove.
 \end{question}
 
 \begin{theorem} Being countably infinite and finite are mutually exclusive set properties. \end{theorem}
@@ -115,7 +115,7 @@ For our purposes, a \textit{claim} is something that may or may not be true, and
 
     \item Given a set $A$ with $|A|=n$, how many subsets does $A$ have?  Prove your answer.
 
-    \item Prove that the natural numbers are in bijection with the even numbers.
+    \item Prove that the natural numbers are in bijection with the even natural numbers.
 
     \item Prove that the natural numbers are in bijection with the integers.
 
@@ -127,3 +127,41 @@ For our purposes, a \textit{claim} is something that may or may not be true, and
 
     \item Prove that the set of words in this sentence is not in correspondence with the set of words in the preamble to the U.S. Constitution.
 \end{enumerate}
+
+\subsection{Addendum: Bijective Functions}
+This section originally appeared a single sheet, with a theorem labeled ``Theorem 1''.
+
+\begin{definition} \label{def:bijective_function} Let $A$ and $B$ be sets.
+\begin{enumerate}
+    \item A set $C$ of the form $C=\{x\in X\ |\ \exists a\in A\ \exists b\in B\ x = (a,b)\}$ is called a \textbf{relation} between $A$ and $B$.
+    \item  A \textbf{function} from $A$ to $B$, written $f:A\to B$, is a relation $C = C(f)$ that has the additional properties:
+    \begin{enumerate}
+        \item For all $a \in A$, there exists an element $b\in B$ such that $(a,b)\in C$, and
+        \item For all $a \in A$ and $b_1, b_2 \in B$, if $(a,b_1)\in C$ and $(a,b_2)\in C$ then $b_1 = b_2$.
+    \end{enumerate}
+    \item A function is said to be \textbf{injective}, or \textbf{one-to-one}, if it has the property: for all $a_1, a_2 \in A$ and $b\in B$, if $(a_1,b)\in C$ and $(a_2,b)\in C$ then $a_1 = a_2$.
+    \item A function is said to be \textbf{surjective}, or \textbf{onto}, if for all $b \in B$, there is an $a\in A$ such that $(a, b)\in C$.
+    \item A \textbf{bijective function}, also called a \textbf{one-to-one correspondence}, is a function which is injective and surjective.
+\end{enumerate}
+\end{definition}
+
+We typically use the notation $f(a) = b$ to denote that $(a,b)\in C(f)$.  So then the two pieces of the definition of a function $f$ become what you're likely used to:
+\renewcommand{\theenumi}{\alph{enumi}}
+\begin{enumerate}
+    \item For every $a \in A$, there exists an element $b\in B$ such that $f(a)=b$, and
+    \item For all $a \in A$ and $b_1, b_2 \in B$, if $f(a) =b_1$ and $f(a) = b_2$ then $b_1 = b_2$.
+\end{enumerate}
+These are colloquially ``the domain is all of $A$'' and ``$f$ passes the vertical line test,'' respectively.  The definition of injective and surjective become:
+\begin{itemize}
+    \item The function $f:A\to B$ is injective if for all $a_1, a_2 \in A$ and $b\in B$, if $f(a_1)=b$ and $f(a_2) = b$ then $a_1 = a_2$.
+    \item The function $f:A\to B$ is surjective if for all $b \in B$, there is an $a\in A$ such that $f(a)= b$.
+\end{itemize}
+After you do this change of notation, you never need to discuss $C$ again, so it is dropped from the discussion.  What we'd like to do is equate the two definitions of ``bijective'', so that one has access to whichever definition makes more sense to them.
+
+\begin{theorem} Let $A$ and $B$ be sets.
+\begin{enumerate}
+    \item If $C$ is a bijection between $A$ and $B$ (in the sense of Definition \ref{def:bijection}), then there is a bijective function $f:A \to B$ such that for all $a \in A$, the (unique) element $b\in B$ such that $(a, b)\in C$ satisfies $f(a) = b$.
+    \item If $f:a\to b$ is a bijective function (in the sense of Definition \ref{def:bijective_function}), then the set $C=\{x\in X\ |\ \exists a\in A\ x = (a,f(a))\}$ is a bijection.
+\end{enumerate}
+\end{theorem}
+In other words, for any sets $A$ and $B$, there is a bijection between the set of all bijections between $A$ and $B$ in the sense of Definition \ref{def:bijection} and the set of all bijective functions between $A$ and $B$ in the sense of Definition \ref{def:bijective_function}.

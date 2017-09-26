@@ -17,7 +17,7 @@
 \begin{theorem}[Strong Pigeonhole Principle] Let $q_1, q_2, \ldots, q_n$ be positive integers.  If $q_1 + q_2 + \ldots + q_n - n + 1$ objects are put into $n$ boxes, then for at least one $i$, the $i^{\text{th}}$ box contains at least $q_i$ objects.
 \end{theorem}
 
-\begin{examples} \begin{enumerate} \leavevmode
+\begin{examples} \leavevmode\begin{enumerate} 
     \item If $n+1$ numbers are chosen from the set $\{1, \ldots, 2n\}$, then there is a pair that differ by $1$.
     \item If $n+1$ numbers are chosen from the set $\{1, \ldots, 3n\}$, then there is a pair that differ by $2$.
 \end{enumerate}\end{examples}
@@ -29,6 +29,17 @@
 \end{example}
 
 \subsection{Permutations and Combinations}
+\begin{definition}  Let $A$ be a set.  The set $X=\{A_1, A_2, \ldots, A_n\}$ is said to be a \textbf{partition} of $A$ if:
+\begin{enumerate}
+    \item $A_i \subseteq A$ for all $i$, $1\leq i \leq n$,
+    \item $A_i \cap A_j = \emptyset$ for all $i$ and $j$, $1 \leq i < j \leq n$, and
+    \item $A = A_1 \cup A_2 \cup \ldots \cup A_n$.
+\end{enumerate}
+
+This definition is primarily useful for the language in proofs surrounding the following four ``Rules of (arithmetic)''.
+
+\end{definition}
+
 \begin{theorem}[Rule of Addition] If a set $S$ can be written as $S = S_1 \cup S_2$ with $S_1 \cap S_2 = \emptyset$, then $|S| = |S_1| + |S_2|$.
 \end{theorem}
 
@@ -54,7 +65,7 @@
 \begin{theorem}[Rule of Subtraction] Let $A$ and $U$ be subsets such that $A \subseteq U$.  Then $|A| = |U| - |U\setminus A|$.
 \end{theorem}
 
-\begin{example} A set of computer passwords are taken from the characters 0-9 and $a$-$z$. How many have repeated symbols?
+\begin{example} A set of length-8 computer passwords are taken from the characters 0-9 and $a$-$z$. How many have repeated symbols?
 \end{example}
 
 \begin{theorem}[Rule of Division] Let $S$ be a finite set that is partitioned into $k$ parts of equal size, say $n$.  Then $$k = \frac{|S|}{n}.$$
