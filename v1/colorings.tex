@@ -1,25 +1,54 @@
 \section{Colorings}\label{sec:colorings}
 
-\begin{itemize}
-    \item A graph has been ($n$-)\textbf{colored} if each vertex has been assigned a number from $\{1, 2, \ldots, n\}$ such that no edge joins vertices with the same number (``color'').  We say that a graph $G$ is \textbf{$n$-colorable} if it may be $n$-colored.
-    \item examples
-    \item The \textbf{chromatic number} of a graph $G$ is the smallest $n$ such that $G$ is $n$-colorable, denoted $X(G)$.
-    \item examples
-    \item (DNP) Four-color theorem: Every planar graph has $X \leq 4$.
-    \item Five-color theorem: Every planar graph has $X \leq 5$. (induction)
-    \item Every planar graph having a vertex of degree $\leq 4$ has $X\leq 4$.  This is crazy!  Compare to the theorem about every planar graph having a vertex $\leq 5$. % Wait, I don't believe this as stated
-    \item It is sufficient to prove the four-color theorem for cubic maps (trivalent graphs).
-    \item reading about the four-color theorem and its proof.  Do you believe it?
-    \item Map colorings!  define dual graph and why no bridges
-    \item exercises
-    \item (Brooks) Let $G$ be a connected (simple) graph.  If $G$ is not complete and its largest vertex degree is $n$, then $G$ is $n$-colorable. % I show them? tricky proof!
-    \item discuss examples where Brooks theorem is useful vs. not
-    \item A map is 2-colorable if and only if $G$ (the dual graph?) is Eulerian
+\begin{definition} A graph $G$ is said to have been ($n$-)\textbf{colored} if each vertex has been assigned a (non-unique) number from $\{1, 2, \ldots, n\}$ such that no edge joins vertices with the same number (``color'').  We say that a graph $G$ is \textbf{$n$-colorable} if it may be $n$-colored.
+\end{definition}
 
-    %from ind comb
-    \item Let $G$ be a graph.  Then $1 \leq X(G) \leq v$; $X(G) = v$ if and only if $G$ is a complete graph.
-    \item cor if $G$ has a subgraph isomorphic to the complete graph $K_p$, then $p \leq X(G)$.
-    \item Let $G$ be a graph with at least one edge.  Then $X(G)=2$ if and only if $G$ is a bipartite graph.
-    \item 
+\begin{examples}\leavevmode
+\begin{enumerate}
+    \item Show that
+\end{enumerate}
+\end{examples}
 
-\end{itemize}
+\begin{definition} The \textbf{chromatic number} of a graph $G$ is the smallest $n$ such that $G$ is $n$-colorable, denoted $X(G)$.
+\end{definition}
+
+\begin{examples}\leavevmode
+\begin{enumerate}
+    \item Determine $X(K_4)$, $X(K_5)$, $X(W_5)$.
+    \item Determine $X(K_{m,n})$ for all natural numbers $m$ and $n$.
+\end{enumerate}
+\end{examples}
+
+\begin{theorem}[Four-color Theorem] Every planar graph has $X \leq 4$.
+\end{theorem}
+
+\begin{theorem}[Five-color Theorem] Every planar graph has $X \leq 5$.
+\end{theorem}
+
+\begin{claim} Every planar graph having a vertex of degree $\leq 4$ has $X\leq 4$.
+\end{claim}
+
+\begin{theorem} It is sufficient to prove the four-color theorem for trivalent graphs, or graphs which are regular of degree three.
+\end{theorem}
+
+% TODO!!!!
+\begin{definition} Map colorings!  define dual graph and why no bridges
+\end{definition}
+
+\begin{definition}[Brooks] Let $G$ be a connected graph.  If $G$ is not complete and its largest vertex degree is $n$, then $G$ is $n$-colorable.
+\end{definition}
+
+\begin{examples}  Construct examples of graphs where Brooks theorem is useful and informative, and graphs for which Brooks theorem is less informative.
+\end{examples}
+
+\begin{theorem} A map is 2-colorable if and only if $G$ (the dual graph?) is Eulerian
+\end{theorem}
+
+\begin{theorem} Let $G$ be a graph.  Then $1 \leq X(G) \leq v$; $X(G) = v$ if and only if $G$ is a complete graph.
+\end{theorem}
+
+\begin{corollary} If $G$ has a subgraph isomorphic to the complete graph $K_p$, then $p \leq X(G)$.
+\end{corollary}
+
+\begin{theorem} Let $G$ be a graph with at least one edge.  Then $X(G)=2$ if and only if $G$ is a bipartite graph.
+\end{theorem}
