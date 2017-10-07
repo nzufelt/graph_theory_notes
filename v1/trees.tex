@@ -1,25 +1,61 @@
 \section{Trees}\label{sec:trees}
 
-This is the section on Trees, still to be completed.
+\begin{definition} A \textbf{tree} is a connected graph with no circuits.
+\end{definition}
 
-\begin{itemize}
-    \item Definition: A tree is a connected graph with no circuits/cycles.
-    \item TFAE:
-    \begin{enumerate}
-        \item $T$ is a tree,
-        \item $T$ contains no circuits/cycles and has $v-1$ edges,
-        \item $T$ is connected and has $v-1$ edges,
-        \item $T$ is connected and every edge of $T$ is a \textbf{bridge}, \textit{i.e.} it lies in a disconnecting set of a size one,
-        \item Any two vertices of $T$ have a unique path conntecting them,
-        \item $T$ contains no circuits/cycles but the addition of any new edge produces exactly one circuit/cycle.
-    \end{enumerate}
-    \item Def spanning trees
-    \item prove that if a tree has a vertex of degree $p$, then it has at least $p$ \textit{leaves}, \textit{i.e.} vertices of degree $1$.
-    \item Let $n$ be a positive integer and let $2 \leq k \leq n-1$.  Construct a family of trees $T_{n,k}$ with $n$ vertices and $k$ leaves.  Can a tree have any other combination of $n$ and $k$?
-    \item Let $T$ be a tree with $v$ vertices.  Prove that the length of the shortest cycle (or closed path) that includes each edge of $G$ at least once is $2(n-1)$.
+\begin{theorem} Let $T$ be a graph.  The following are equivalent:
+\begin{enumerate}
+    \item $T$ is a tree,
+    \item $T$ contains no circuits/cycles and has $v-1$ edges,
+    \item $T$ is connected and has $v-1$ edges,
+    \item $T$ is connected and every edge of $T$ is a \textbf{bridge}, \textit{i.e.} it lies in a disconnecting set of a size one,
+    \item Any two vertices of $T$ have a unique path conntecting them,
+    \item $T$ contains no circuits/cycles but the addition of any new edge produces exactly one circuit/cycle.
+\end{enumerate}
+\end{theorem}
 
+\begin{theorem} Let $T$ be a tree.  If $T$ has a vertex of degree $p$, then it has at least $p$ \textit{leaves}, \textit{i.e.} vertices of degree $1$.
+\end{theorem}
 
+\begin{exercise}Determine the number of non-isomorphic trees of size:
+\begin{enumerate}
+    \item 5
+    \item 6
+    \item 7
+\end{enumerate}
+\end{exercise}
 
+\begin{definition} Let $G$ be a connected graph.  A \textbf{spanning tree} for $G$ is a subgraph $T$ of $G$ that has the properties:
+\begin{enumerate}
+    \item $T$ is a tree, and
+    \item every vertex of $G$ is a vertex of $T$.
+\end{enumerate}
+\end{definition}
 
+\begin{exercise} Construct an algorithm to ``grow'' a spanning tree, \textit{i.e.} given an edge $e$ of a connected graph $G$, describe an algorithm which will result in a spanning tree containing $e$.  Prove that your algorithm always works.
+\end{exercise}
 
-\end{itemize}
+\begin{exercise} What can be said (and proven) about those edges that are contained in every spanning tree?  In none?
+\end{exercise}
+
+\begin{theorem} Let $G$ be a graph with $v$ vertices.  Then the length of the shortest circuit that includes each edge of $G$ at least once is $2(v-1)$.
+\end{theorem}
+
+\begin{exercise} The following theorem is due to Kirchhoff, and is quite challenging.  Do not attempt to prove it!  Look up what all the terms mean, be able to describe it to a classmate, compute a couple of examples and perhaps even look up a proof of the theorem!
+\end{exercise}
+
+\begin{theorem}[Kirchhoff's Theorem] Let $G$ be a connected graph.  Construct the following matrix $L=L(G)$, called the \textit{Laplacian matrix} of $G$.  Order the vertices of $G$ as $v_1, v_2, \ldots, v_v$, and then $L_{i,j}$, the entry of $L$ located in entry $i,j$, is given by:
+\begin{equation*}
+L_{i,j} = \left\{
+\begin{array}{ll}
+\text{deg}(v_i)& \text{if }i=j\\
+-1 & \text{if $i \neq j$ and $i$ and $j$ are adjacent}, or\\
+0& \text{otherwise.}
+\end{array}
+\right.
+\end{equation*}
+Then $L$ is a singular matrix, and so has determinant 0.  However, any submatrix of rank $n-1$, \textit{i.e.} any matrix obtained from $L$ by deleting the $i^{\text{th}}$ row and column, for some $i=1, \ldots, v$, is not singular, and the absolute value of its determinant is equal to the number of distinct spanning trees of $G$.
+\end{theorem}
+
+\begin{corollary}[Cayley's Theorem] For a complete graph $K_n$, the number of spanning trees of $K_n$ is $n^{n-2}$.
+\end{corollary}
