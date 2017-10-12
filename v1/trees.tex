@@ -1,16 +1,16 @@
 \section{Trees}\label{sec:trees}
 
-\begin{definition} A \textbf{tree} is a connected graph with no circuits.
+\begin{definition} A \textbf{tree} is a connected graph with no cycles.
 \end{definition}
 
 \begin{theorem} Let $T$ be a graph.  The following are equivalent:
 \begin{enumerate}
     \item $T$ is a tree,
-    \item $T$ contains no circuits/cycles and has $v-1$ edges,
+    \item $T$ contains no cycles and has $v-1$ edges,
     \item $T$ is connected and has $v-1$ edges,
     \item $T$ is connected and every edge of $T$ is a \textbf{bridge}, \textit{i.e.} it lies in a disconnecting set of a size one,
     \item Any two vertices of $T$ have a unique path conntecting them,
-    \item $T$ contains no circuits/cycles but the addition of any new edge produces exactly one circuit/cycle.
+    \item $T$ contains no cycles but the addition of any new edge produces exactly one cycle.
 \end{enumerate}
 \end{theorem}
 
@@ -38,13 +38,13 @@
 \begin{exercise} What can be said (and proven) about those edges that are contained in every spanning tree?  In none?
 \end{exercise}
 
-\begin{theorem} Let $G$ be a graph with $v$ vertices.  Then the length of the shortest circuit that includes each edge of $G$ at least once is $2(v-1)$.
+\begin{theorem} Let $G$ be a graph with $v$ vertices.  Then the length of the shortest cycle that includes each edge of $G$ at least once is $2(v-1)$.
 \end{theorem}
 
 \begin{exercise} The following theorem is due to Kirchhoff, and is quite challenging.  Do not attempt to prove it!  Look up what all the terms mean, be able to describe it to a classmate, compute a couple of examples and perhaps even look up a proof of the theorem!
 \end{exercise}
 
-\begin{theorem}[Kirchhoff's Theorem] Let $G$ be a connected graph.  Construct the following matrix $L=L(G)$, called the \textit{Laplacian matrix} of $G$.  Order the vertices of $G$ as $v_1, v_2, \ldots, v_v$, and then $L_{i,j}$, the entry of $L$ located in entry $i,j$, is given by:
+\begin{theorem}[Kirchhoff's Theorem, Do Not Prove] Let $G$ be a connected graph.  Construct the following matrix $L=L(G)$, called the \textit{Laplacian matrix} of $G$.  Order the vertices of $G$ as $v_1, v_2, \ldots, v_v$, and then $L_{i,j}$, the entry of $L$ located in entry $i,j$, is given by:
 \begin{equation*}
 L_{i,j} = \left\{
 \begin{array}{ll}

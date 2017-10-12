@@ -1,20 +1,23 @@
 \section{Planar Graphs} \label{sec:planar}
 \begin{definition}\leavevmode
 \begin{enumerate}
-    \item In a graph diagram $D$ in the space $X$ (such as the plane, $R^2$), an \textbf{edge-crossing} is a point $x\in X$ such that $x$ lies in more than one edge/arc of $D$.
-    \item A graph $G$ is \textbf{planar} if it has a graph diagram drawn in the plane with no edge-crossings.
+    \item In a graph diagram $D$ in the space $X$ (such as the plane, $\mathbb{R}^2$), an \textbf{edge-crossing} is a point $x\in X$ such that $x$ lies in the interior of more than one edge/arc of $D$.
+    \item A graph $G$ is \textbf{planar} if it has a diagram drawn in the plane with no edge-crossings.
 \end{enumerate}
 \end{definition}
 
 \begin{examples}\leavevmode
 \begin{enumerate}
-    \item Draw a graph diagram $K_4$ which has an edge-crossing, and one without.  Is $K_4$ planar?
-    \item Draw a planar graph diagram for $K_{m,n}$ for $m<3$ and $n<4$.
+    \item Draw a diagram of $K_4$ which has an edge-crossing, and one without.  Is $K_4$ planar?
+    \item Draw a planar diagram for $K_{m,n}$ for $m<3$ and $n<4$.
 \end{enumerate}
 \end{examples}
 
-\begin{theorem}[Jordan Curve Thoerem, Do Not Prove] If $C$ is a continuous simple closed curve in a plane and two points $x$ and $y$ of $C$ are joined by a continuous simple arc $L$ such that $L \cap C = \{x, y\}$, then except for its endpoints $L$ is entirely contained in one of the two regions of $\R^2 \setminus C$.
+\begin{theorem}[Jordan Curve Theorem, Do Not Prove] If $C$ is a continuous simple closed curve in a plane and two points $x$ and $y$ of $C$ are joined by a continuous simple arc $L$ such that $L \cap C = \{x, y\}$, then except for its endpoints $L$ is entirely contained in one of the two regions of $\R^2 \setminus C$.
 \end{theorem}
+
+\begin{exercise} Draw an example of the situation described in the Jordan Curve theorem which demonstrates that the conclusion of the Jordan Curve Theorem is not always obvious.
+\end{exercise}
 
 \begin{theorem}\leavevmode
 \begin{enumerate}
@@ -47,27 +50,10 @@
 \begin{theorem}[Kuratowski's Theorem, Do Not Prove] A graph $G$ is nonplanar if and only if $G$ is an expanded supergraph of $K_{3,3}$ or $K_5$.
 \end{theorem}
 
-\begin{example} Show that the following graph is nonplanar.
+\begin{example} Construct an example of a ``large'' graph which is indeed planar by Kuratowski's Theorem.
 \end{example}
 
 \subsection{Euler's Formula}
-\begin{definition} Let $G$ be a graph.
-\begin{enumerate}
-    \item A \textbf{walk}, or \textbf{path} on $G$ is a sequence $v_1, v_2, \ldots, v_n$ of not-necessarily-distinct vertices of $G$ such that $(v_i, v_{i+1})$ is an edge of $G$ for $1\leq i <n$.  A path with $n$ vertices is said to have \textbf{length} $n$.
-    \item $G$ is \textbf{connected} if every pair of vertices of $G$ may be joined by a path.  Otherwise, it is \textbf{disconneted}; the maximal connected subgraphs of a disconnected graph are called the \textbf{components} of the graph.
-\end{enumerate}
-\end{definition}
-
-\begin{remark} Those with a keen understanding of topology might notice that what has actually been defined here is the concept of \textit{path-connectedness}, and that \textit{connectedness} is a more general concept.  However, for graphs, we tend to equate these two definitions.
-\end{remark}
-
-\begin{examples} \leavevmode
-\begin{enumerate}
-    \item Draw examples of paths of length $n$ on a graph with $v$ vertices, for $v=5, 6,$ and $7$ and $n = 3, 5, 8$.
-    \item A \textit{cycle} or \textit{circuit} is a path whose beginning and ending vertices are equal.  Show that $K_4$ cannot be decomposed into a single cycle.  That is, show that no cycle of $K_4$ that uses each edge at most once uses every edge.
-\end{enumerate}
-\end{examples}
-
 \begin{definition} Given a planar graph diagram $D$ of a graph $G$, a \textbf{face} of $D$ is the set of all points in $\R^2 \setminus D$ that may be joined by a continuous arc in $\R^2 \setminus D$.  The number of faces of $D$ is denoted as $f(D)$ (or just $f$ or $f(G)$ if $D$ is clear from context.)
 \end{definition}
 
@@ -77,7 +63,7 @@
 \begin{definition} A graph diagram $D$ is \textbf{polygonal} if it is planar, connected, and has the propery that every edge of $D$ borders on two distinct faces.
 \end{definition}
 
-\begin{theorem}[Euler] If $G$ is polygonal then $v-e+f = 2$.
+\begin{theorem}[Euler]\label{thm:euler} If $G$ is polygonal then $v-e+f = 2$.
 \end{theorem}
 
 \begin{corollary} If $G$ is planar and connected, then $v-e+f = 2$.
@@ -105,7 +91,7 @@
 \end{enumerate}
 \end{examples}
 
-We now aim to classify the platonic graphs.  In order to do so, we'll need the following lemmas.
+\noindent We now aim to classify the platonic graphs.  In order to do so, we'll need the following lemmas.
 
 \begin{lemma} If $G$ is regular of degree $d$ then $e=\frac{dv}{2}$.
 \end{lemma}
@@ -113,5 +99,5 @@ We now aim to classify the platonic graphs.  In order to do so, we'll need the f
 \begin{lemma} If $G$ is platonic of degree $d$, and $n$ is the number of edges bounding each face, then $f = dv/n$.
 \end{lemma}
 
-\begin{theorem}(Euclid) Apart from $K_1$ and the cyclic graphs, there are 5 platonic graphs.
+\begin{theorem}[Euclid] Apart from $K_1$ and the cyclic graphs, there are 5 platonic graphs.
 \end{theorem}

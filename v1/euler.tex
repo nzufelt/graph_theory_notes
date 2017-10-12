@@ -1,31 +1,8 @@
 \section{Eulerian and Hamiltonian Paths}\label{sec:euler}
-\begin{definition}\leavevmode
-\begin{enumerate}
-    \item A \textbf{cycle}, \textbf{circuit}, or \textbf{closed path} is a path $(v_1, \ldots, v_n)$ with $v_1 = v_n$. A path which is not closed is \textbf{open}.
-    \item A path $\gamma = (v_1, \ldots, v_n)$ is \textbf{simple} if $|\{v_1, v_2, \ldots, v_n\}| = n$ if $\gamma$ is open or $n-1$ if $\gamma$ is closed.
-\end{enumerate}
-\end{definition}
-
-\begin{exercise} Prove that any two connected graphs with the same number of vertices and degree sequences $(2, 2, \ldots, 2)$ are isomorphic.
-\end{exercise}
-
-\begin{theorem} Let $G$ be a graph with
-$$\frac{(n-1)(n-2)}{2} +1$$
-edges.  Then $G$ is connected.  This bound is ``sharp'', \textit{i.e.} that this bound cannot be improved for graphs in general.
-\end{theorem}
-
-\begin{theorem} A path $\gamma= (v_1, \ldots, v_n)$ is simple if and only if for all pairs of distinct $i, j$ with $1\leq i < j\leq n$, $v_i \neq v_j$ unless perhaps $i=1$ and $j=n$.
-\end{theorem}
-
-% TODO!
-\begin{examples} Do it!
-\end{examples}
-
 \begin{definition} A path \textbf{traverses} an edge $e$ if it contains the pair $v_i, v_{i+1}$ and $e=(v_i, v_{i+1})$. An \textbf{Eulerian path} is a path in a graph $G$ traverses every edge in $G$ exactly once.  An \textbf{Eulerian cycle} is a cycle which is Eulerian.
 \end{definition}
 
-% TODO!
-\begin{examples} Do it!
+\begin{examples} Construct several examples of Eulerian cycles and paths in graphs, and several examples of graphs that you suspect do not have Eulerian cycles or paths.
 \end{examples}
 
 \begin{theorem} A connected graph $G$ has an Eulerian cycle if and only if every vertex of $G$ is even (\textit{i.e.} has even degree).
@@ -39,8 +16,8 @@ edges.  Then $G$ is connected.  This bound is ``sharp'', \textit{i.e.} that this
 
 \begin{definition} An open \textbf{Hamiltonian path} is one which visits every vertex exactly once. A \textbf{Hamiltonian cycle} $\gamma$ is a cycle in which every vertex $G$ is visited exactly once, apart from the first and last vertex of $\gamma$.
 \end{definition}
-% TODO!
-\begin{examples} Do it!
+
+\begin{examples} Construct several examples of Hamiltonian cycles and paths in graphs, and several examples of graphs that you suspect do not have Hamiltonian cycles or paths.
 \end{examples}
 
 \begin{lemma} If the sum of the degrees of every pair of vertices of a graph $G$ is at least $v-1$, then
@@ -57,8 +34,8 @@ edges.  Then $G$ is connected.  This bound is ``sharp'', \textit{i.e.} that this
 \end{enumerate}
 \end{theorem}
 
-\begin{remark} It is an important open problem in Mathematics to classify Hamiltonian cycles.  Do a little research on the current status of the problem!
-\end{remark}
+\begin{exercise} It is an important open problem in Mathematics to classify Hamiltonian cycles.  Do a little research on the current status of the problem!
+\end{exercise}
 
 \begin{theorem} If $G$ is a graph such that every pair $u$ and $w$ of nonadjacent vertices, $\text{deg}(u) + \text{deg}(w) \geq v$, then $G$ is Hamiltonian.
 \end{theorem}
